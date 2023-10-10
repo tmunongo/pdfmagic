@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      jdbc:
+        lob:
+          non_contextual_creation: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pdfmagic
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+server:
+  port: 8008
+merged:
+  pdf:
+    destination: src/main/resources/temp-pdfs/
+#spring.jpa.show-sql: true
+# spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
