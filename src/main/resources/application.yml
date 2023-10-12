@@ -6,6 +6,10 @@ spring:
       jdbc:
         lob:
           non_contextual_creation: true
+  servlet:
+    multipart:
+      max-file-size: 32MB
+      max-request-size: 32MB
   datasource:
     url: jdbc:postgresql://localhost:5432/pdfmagic
     username: postgres
@@ -16,5 +20,3 @@ server:
 merged:
   pdf:
     destination: src/main/resources/temp-pdfs/
-#spring.jpa.show-sql: true
-# spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
